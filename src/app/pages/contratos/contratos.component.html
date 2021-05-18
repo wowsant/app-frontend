@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Lista de Contratos</h4>
+        </div>
+        <div class="card-body">
+          <table datatable class="row-border hover">
+            <thead>
+              <tr >
+                <th *ngFor="let item of listaTituloContratos" scope="col"> {{item}} </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of listaContratos">
+                <td>{{item.id}}</td>
+                <td> <button class="btn btn-success"> {{ item.situacao }} </button> </td>
+                <td> {{ item.quitado }} </td>
+                <td>{{item.nomeContratante}}</td>
+                <td>{{item.tipoContrato}}</td>
+                <td>{{item.valor}}</td>
+                <td>{{item.inicioCobranca}}</td>
+                <td>{{item.fimCobranca}}</td>
+                <td>
+                  <button class="btn btn-primary" title="Editar contrato">
+                    <i class="fas fa-pen-square fa-2x"></i>
+                  </button>
+                  <button class="btn btn-warning" title="Enviar cobrança por e-mail">
+                    <i class="fas fa-envelope fa-2x"></i>
+                  </button>
+                  <button class="btn btn-success" title="Visualizar extrato financeiro">
+                    <i class="fas fa-file-invoice-dollar fa-2x"></i>
+                  </button>
+                  <button class="btn btn-dark" title="Visualizar contratante">
+                    <i class="fas fa-address-card fa-2x"></i>
+                  </button>
+                  <button class="btn btn-danger" title="Visualizar contratante">
+                    <i class="fas fa-trash-alt fa-2x"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
